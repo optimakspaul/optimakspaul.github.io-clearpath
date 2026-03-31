@@ -1,258 +1,85 @@
-/* 全域變數與重設 */
-:root {
-    --primary-color: #0b3d60; /* 參考附圖的深藍色 */
-    --secondary-color: #1a5b82;
-    --accent-color: #e2e8f0;
-    --text-color: #333333;
-    --light-bg: #f9fbfd;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
-    scroll-behavior: smooth; /* 點擊導覽列時會有平滑滾動效果 */
-}
-
-body {
-    color: var(--text-color);
-    line-height: 1.6;
-    background-color: #ffffff;
-}
-
-/* 導覽列 */
-header {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 1.2rem 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 30px;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: opacity 0.3s;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
-}
-
-/* 首頁橫幅 (Hero Section) */
-.hero {
-    /* 這裡放了一張漸層深藍底圖來模擬你的附圖1 */
-    background: linear-gradient(rgba(11, 61, 96, 0.85), rgba(26, 91, 130, 0.85)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
-    color: white;
-    text-align: center;
-    padding: 120px 20px;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-}
-
-.hero > p {
-    font-size: 1.1rem;
-    max-width: 800px;
-    margin: 0 auto 30px auto;
-    font-weight: 300;
-}
-
-.highlight-box {
-    background-color: rgba(255, 255, 255, 0.15);
-    padding: 20px 30px;
-    border-radius: 4px;
-    border-left: 4px solid white;
-    max-width: 800px;
-    margin: 0 auto;
-    backdrop-filter: blur(5px);
-}
-
-.highlight-box p {
-    margin: 0;
-    font-size: 1.05rem;
-}
-
-/* 價值主張區塊 */
-.value-section {
+/* ===============================
+   新增：線上估價區塊 (Pricing Section)
+   =============================== */
+.pricing-section {
     padding: 80px 5%;
-    background-color: #ffffff;
-    text-align: center;
+    background-color: #ffffff; /* 如果想區隔，可以改成 var(--light-bg) */
 }
 
-.value-section h2 {
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 15px;
-}
-
-.value-section > p {
-    font-size: 1.1rem;
-    margin-bottom: 50px;
-    color: #666;
-}
-
-.benefits-grid {
+.pricing-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.benefit-card {
-    background: white;
-    padding: 30px 20px;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.benefit-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
-
-.benefit-card h3 {
-    color: var(--primary-color);
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-.benefit-card p {
-    color: #555;
-    font-size: 0.95rem;
-}
-
-/* 服務項目區塊 */
-.services-section {
-    padding: 80px 5%;
-    background-color: var(--light-bg);
-}
-
-.section-title {
-    text-align: center;
-    color: var(--primary-color);
-    font-size: 2rem;
-    margin-bottom: 50px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.service-item {
-    background: white;
+.pricing-card {
     border: 1px solid var(--primary-color);
-    padding: 30px;
     border-radius: 8px;
+    padding: 40px 30px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-item h3 {
-    font-size: 1.2rem;
-    margin-bottom: 15px;
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.pricing-card h3 {
     color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
 
-.service-item p {
-    color: #555;
+.target-audience {
     font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-weight: bold;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
 }
 
-/* 聯絡我們表單 */
-.contact-section {
-    padding: 80px 5%;
-    background-color: #ffffff;
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+    flex-grow: 1; /* 讓卡片內容對齊底部 */
 }
 
-.contact-container {
-    max-width: 700px;
-    margin: 0 auto;
+.features li {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #444;
 }
 
-.form-group {
+.price {
+    text-align: right;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
     margin-bottom: 25px;
 }
 
-.form-group label {
+.price span {
+    font-size: 2.2rem;
+}
+
+.apply-btn {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 500;
-    color: var(--primary-color);
-    font-size: 0.95rem;
-}
-
-.form-group input, .form-group textarea {
-    width: 100%;
-    padding: 12px 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
-}
-
-.form-group input:focus, .form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-color);
-}
-
-.submit-btn {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-    font-weight: bold;
-}
-
-.submit-btn:hover {
-    background-color: var(--secondary-color);
-}
-
-/* 頁尾 */
-footer {
-    background-color: var(--primary-color);
-    color: white;
     text-align: center;
-    padding: 30px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-/* 響應式微調 (手機版) */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .hero h1 { font-size: 2rem; }
-    .hero p { font-size: 1rem; }
-    .nav-links { gap: 15px; }
+.apply-btn:hover {
+    background-color: var(--secondary-color);
 }
