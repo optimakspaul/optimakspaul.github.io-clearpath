@@ -4,173 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>澄正記帳士事務所 | 專業稅務與財務規劃</title>
-    <style>
-        /* CSS 樣式設定 */
-        :root {
-            --primary-color: #1a365d; /* 專業深藍 */
-            --secondary-color: #2b6cb0;
-            --accent-color: #e2e8f0;
-            --text-color: #333333;
-            --light-bg: #f7fafc;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
-        }
-
-        body {
-            color: var(--text-color);
-            line-height: 1.6;
-            background-color: #ffffff;
-        }
-
-        /* 導覽列 */
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            letter-spacing: 2px;
-        }
-
-        /* 首頁橫幅 (Hero Section) */
-        .hero {
-            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(43, 108, 176, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
-            color: white;
-            text-align: center;
-            padding: 100px 20px;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 20px auto;
-        }
-
-        .highlight-box {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid white;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* 價值主張區塊 */
-        .value-section {
-            padding: 80px 5%;
-            background-color: var(--light-bg);
-            text-align: center;
-        }
-
-        .value-section h2 {
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .value-section > p {
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-            color: #555;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .benefit-card {
-            background: white;
-            padding: 30px 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .benefit-card h3 {
-            color: var(--secondary-color);
-            margin-bottom: 15px;
-        }
-
-        /* 服務項目區塊 */
-        .services-section {
-            padding: 80px 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            color: var(--primary-color);
-            font-size: 2rem;
-            margin-bottom: 50px;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-        }
-
-        .service-item {
-            border: 1px solid var(--accent-color);
-            padding: 30px;
-            border-radius: 8px;
-            border-top: 5px solid var(--primary-color);
-        }
-
-        .service-item h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: var(--primary-color);
-        }
-
-        /* 頁尾 */
-        footer {
-            background-color: var(--text-color);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
-
-        /* 響應式微調 */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2rem; }
-            .hero p { font-size: 1rem; }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="logo">澄正記帳士事務所</div>
+        <nav class="nav-links">
+            <a href="#services">服務項目</a>
+            <a href="#pricing">線上估價</a>
+            <a href="#contact">聯絡我們</a>
+        </nav>
     </header>
 
     <section class="hero">
@@ -201,30 +45,56 @@
         </div>
     </section>
 
-    <section class="services-section">
+    <section id="services" class="services-section">
         <h2 class="section-title">我們的專業服務</h2>
-        <div class="services-grid">
-            
+        <div id="pricing" class="services-grid">
             <div class="service-item">
                 <h3>📝 設立登記</h3>
                 <p>提供公司行號、商號設立、變更之縣市政府登記及國稅局營業登記代辦服務。</p>
             </div>
-
             <div class="service-item">
                 <h3>📊 記帳及報稅</h3>
                 <p>公司會計帳務處理及營業稅、營所稅、扣繳、暫繳等各項稅務申報。</p>
             </div>
-
             <div class="service-item">
                 <h3>💡 稅務諮詢及財務決策</h3>
                 <p>提供專業的稅務合規審查與長遠的企業財務策略規劃。</p>
             </div>
-
             <div class="service-item">
                 <h3>🤝 其他綜合服務</h3>
                 <p>勞健保加退保處理、配合會計師簽證服務、個人及家族稅務規劃。</p>
             </div>
+        </div>
+    </section>
 
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <h2 class="section-title">聯絡我們</h2>
+            <p style="text-align: center; margin-bottom: 30px; color: #555;">有任何設立、帳務或稅務問題，歡迎填寫表單，我們將盡快與您聯繫。</p>
+            
+            <form action="https://formspree.io/f/你的專屬碼" method="POST">
+                <div class="form-group">
+                    <label for="name">聯絡人姓名 *</label>
+                    <input type="text" id="name" name="name" required placeholder="請輸入您的姓名">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">聯絡電話 *</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="請輸入聯絡電話">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">電子信箱</label>
+                    <input type="email" id="email" name="email" placeholder="請輸入 Email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">諮詢內容</label>
+                    <textarea id="message" name="message" rows="5" placeholder="請簡述您的需求（例如：想了解有限公司設立費用、每月記帳費等）"></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">送出表單並取得聯繫</button>
+            </form>
         </div>
     </section>
 
