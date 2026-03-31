@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>澄正記帳士事務所 | 專業稅務與財務規劃</title>
+    <style>
+        /* CSS 樣式設定 */
+        :root {
+            --primary-color: #1a365d; /* 專業深藍 */
+            --secondary-color: #2b6cb0;
+            --accent-color: #e2e8f0;
+            --text-color: #333333;
+            --light-bg: #f7fafc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'PingFang TC', 'Microsoft JhengHei', 'Noto Sans TC', sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /* 導覽列 */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        /* 首頁橫幅 (Hero Section) */
+        .hero {
+            background: linear-gradient(rgba(26, 54, 93, 0.8), rgba(43, 108, 176, 0.8)), url('https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 20px auto;
+        }
+
+        .highlight-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* 價值主張區塊 */
+        .value-section {
+            padding: 80px 5%;
+            background-color: var(--light-bg);
+            text-align: center;
+        }
+
+        .value-section h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .value-section > p {
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .benefit-card {
+            background: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .benefit-card h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        /* 服務項目區塊 */
+        .services-section {
+            padding: 80px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 50px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            border: 1px solid var(--accent-color);
+            padding: 30px;
+            border-radius: 8px;
+            border-top: 5px solid var(--primary-color);
+        }
+
+        .service-item h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* 頁尾 */
+        footer {
+            background-color: var(--text-color);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        /* 響應式微調 */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">澄正記帳士事務所</div>
+    </header>
+
+    <section class="hero">
+        <h1>創業，不該從踩雷開始</h1>
+        <p>公司怎麼設立、稅怎麼報、制度怎麼選，一開始選錯，後面往往成本更高。</p>
+        <div class="highlight-box">
+            <p>我們協助您從設立初期就做好規劃，讓企業在合法架構下穩健起步，而不是邊做邊修正。</p>
+        </div>
+    </section>
+
+    <section class="value-section">
+        <h2>從數字看見你生意的價值</h2>
+        <p>記帳，只是寫下交易的過去；分析，是預見事業的未來。<br>你需要的不只是一份帳，而是幫助你看懂生意的導航。</p>
+        
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>看清獲利能力</h3>
+                <p>我們不只協助您完成帳務與報稅，更透過財報幫助您看清公司真正的獲利能力。</p>
+            </div>
+            <div class="benefit-card">
+                <h3>穩健商業決策</h3>
+                <p>在擴張、投資前做出更穩健的決策，從數字中發掘企業成長的新機會。</p>
+            </div>
+            <div class="benefit-card">
+                <h3>優化稅負結構</h3>
+                <p>在合法範圍內，為您進行稅務策略規劃，避免多繳冤枉稅。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <h2 class="section-title">我們的專業服務</h2>
+        <div class="services-grid">
+            
+            <div class="service-item">
+                <h3>📝 設立登記</h3>
+                <p>提供公司行號、商號設立、變更之縣市政府登記及國稅局營業登記代辦服務。</p>
+            </div>
+
+            <div class="service-item">
+                <h3>📊 記帳及報稅</h3>
+                <p>公司會計帳務處理及營業稅、營所稅、扣繳、暫繳等各項稅務申報。</p>
+            </div>
+
+            <div class="service-item">
+                <h3>💡 稅務諮詢及財務決策</h3>
+                <p>提供專業的稅務合規審查與長遠的企業財務策略規劃。</p>
+            </div>
+
+            <div class="service-item">
+                <h3>🤝 其他綜合服務</h3>
+                <p>勞健保加退保處理、配合會計師簽證服務、個人及家族稅務規劃。</p>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 澄正記帳士事務所. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
